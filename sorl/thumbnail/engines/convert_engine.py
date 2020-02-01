@@ -1,4 +1,3 @@
-from __future__ import unicode_literals, with_statement
 import re
 import os
 import subprocess
@@ -9,7 +8,6 @@ from django.utils.encoding import smart_str
 from django.core.files.temp import NamedTemporaryFile
 
 from sorl.thumbnail.base import EXTENSIONS
-from sorl.thumbnail.compat import b
 from sorl.thumbnail.conf import settings
 from sorl.thumbnail.engines.base import EngineBase
 
@@ -116,7 +114,8 @@ class Engine(EngineBase):
             p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             p.wait()
             result = p.stdout.read().strip()
-            if result and result != b('unknown'):
+            unknown = 'unknown'.encode('latin-1')
+            if result and result != unknown:
                 result = int(result)
                 options = image['options']
                 if result == 2:

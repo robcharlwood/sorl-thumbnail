@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 import os
 import unittest
 from subprocess import Popen, PIPE
@@ -18,7 +16,6 @@ from sorl.thumbnail.parsers import parse_geometry
 from sorl.thumbnail.templatetags.thumbnail import margin
 from sorl.thumbnail.engines.pil_engine import Engine as PILEngine
 from .models import Item
-from .compat import is_osx
 from .utils import BaseTestCase
 
 

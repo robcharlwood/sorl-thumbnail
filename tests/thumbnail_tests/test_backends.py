@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from io import StringIO
 import os
 import sys
@@ -15,7 +14,6 @@ from sorl.thumbnail.base import ThumbnailBackend
 from sorl.thumbnail.conf import settings
 from sorl.thumbnail.helpers import get_module_class
 from sorl.thumbnail.images import ImageFile
-from .compat import is_windows
 from .utils import BaseTestCase, FakeFile, same_open_fd_count
 from .models import Item
 

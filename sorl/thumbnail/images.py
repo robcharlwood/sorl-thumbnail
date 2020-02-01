@@ -1,6 +1,3 @@
-# encoding=utf-8
-
-from __future__ import unicode_literals, division
 import json
 import os
 import re
@@ -11,8 +8,6 @@ from django.utils.encoding import force_str
 from django.utils.functional import LazyObject, empty
 from sorl.thumbnail import default
 from sorl.thumbnail.conf import settings
-from sorl.thumbnail.compat import (urlopen, urlparse, urlsplit,
-                                   quote, quote_plus, URLError, encode)
 from sorl.thumbnail.default import storage as default_storage
 from sorl.thumbnail.helpers import ThumbnailError, tokey, get_module_class, deserialize
 from sorl.thumbnail.parsers import parse_geometry
